@@ -45,6 +45,11 @@
         name: ubuntu
         groups: docker
         append: yes
+    - name: adding devopsadmin user to docker group
+      user:
+        name: devopsadmin
+        groups: docker
+        append: yes
     - name: Install docker-compose
       get_url:
         url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
